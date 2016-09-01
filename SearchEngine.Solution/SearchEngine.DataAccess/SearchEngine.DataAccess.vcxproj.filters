@@ -24,18 +24,12 @@
     <ClInclude Include="CTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CPage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CNode.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="CTree.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CPage.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>

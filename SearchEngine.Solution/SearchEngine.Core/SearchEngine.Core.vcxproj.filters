@@ -36,10 +36,10 @@
     <ClInclude Include="ISearchEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IPage.h">
+    <ClInclude Include="IGeneric.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IGeneric.h">
+    <ClInclude Include="IPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
