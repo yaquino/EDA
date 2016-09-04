@@ -1,6 +1,4 @@
 #pragma once
-#ifndef IPARSER_H
-#define IPARSER_H
 
 #include "DataTypes.h"
 
@@ -9,4 +7,3 @@ public:
 	virtual bool read(FILE_NAME) = 0;
 };
 
-#endif
