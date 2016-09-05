@@ -11,6 +11,15 @@ int main(){
 
 	Tree<string> my_trial;
 
+	my_trial.Insert("abab");
+
+	my_trial.Insert("bc");
+
+	my_trial.Insert("baca");
+
+	if (my_trial.Find("bac")) {
+		cout << "Ya encontre" << endl;
+	}
 
 	return 0;
 }
