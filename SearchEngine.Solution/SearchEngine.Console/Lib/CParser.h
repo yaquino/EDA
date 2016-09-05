@@ -1,6 +1,4 @@
 #pragma once
-#ifndef CPARSER_H
-#define CPARSER_H
 
 #include "../Core/DataTypes.h"
 #include "../Core/IParser.h"
@@ -12,5 +10,3 @@ public:
 	~CParser();
 	bool read(FILE_NAME);
 };
-
-#endif

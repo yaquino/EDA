@@ -1,6 +1,5 @@
 #pragma once
-#ifndef CPAGE_H
-#define CPAGE_H
+
 
 #include "../Core/DataTypes.h"
 #include "../Core/IPage.h"
@@ -14,4 +13,3 @@ public:
 	NUMBER_LINES GetNumberLines();
 };
 
-#endif

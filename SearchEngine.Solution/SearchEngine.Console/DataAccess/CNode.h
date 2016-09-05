@@ -1,6 +1,5 @@
 #pragma once
-#ifndef CNODE_H
-#define CNODE_H
+
 
 #include "../Core/DataTypes.h"
 #include "../Core/INode.h"
@@ -15,5 +14,3 @@ public:
 	bool SetData(T);
 	INode<T> GetChild(NUMBER_CHILD);
 };
-
-#endif

@@ -1,6 +1,7 @@
 
 #include "Core\ISearchEngine.h"
 #include "Lib\CSearchEngine.h"
+
 #include <iostream>
 using namespace std;
 

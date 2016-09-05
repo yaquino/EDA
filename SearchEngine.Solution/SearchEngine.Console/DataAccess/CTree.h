@@ -1,7 +1,4 @@
 #pragma once
-#ifndef CTREE_H
-#define CTREE_H
-
 #include "../Core/ITree.h"
 
 template <class T>
@@ -13,5 +10,3 @@ public:
 	bool Insert(T);
 	bool Search(T);
 };
-
-#endif

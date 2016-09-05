@@ -1,7 +1,4 @@
 #pragma once
-#ifndef CINDEXER_H
-#define CINDEXER_H
-
 #include "../Core/DataTypes.h"
 #include "../Core/IIndexer.h"
 
@@ -13,4 +10,3 @@ public:
 	bool Insert(FILE_NAME, ID_PAGE, POSITION);
 };
 
-#endif

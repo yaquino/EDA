@@ -1,6 +1,4 @@
 #pragma once
-#ifndef ITREE_H
-#define ITREE_H
 
 #include "DataTypes.h"
 template <class T>
@@ -10,4 +8,3 @@ public:
 	virtual bool Search(T) = 0;
 };
 
-#endif
