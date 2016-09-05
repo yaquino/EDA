@@ -1,6 +1,4 @@
 #pragma once
-#ifndef DATATYPES_H
-#define DATATYPES_H
 
 #include <string>
 using namespace std;
@@ -14,4 +12,3 @@ typedef	unsigned int POSITION;
 typedef	unsigned int NUMBER_CHILD;
 typedef	unsigned int NUMBER_LINES;
 
-#endif
