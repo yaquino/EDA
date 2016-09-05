@@ -13,10 +13,87 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{491bd7e8-75ab-4a35-9dd9-0a558214c5d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataAccess">
+      <UniqueIdentifier>{204682c2-e65c-4ff7-933a-8760503fd10e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess">
+      <UniqueIdentifier>{b1f2efe2-0c29-4dd6-8596-36ac2afa5e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Lib">
+      <UniqueIdentifier>{1ac31dd6-991b-4edb-a63c-96667b0e22dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Lib">
+      <UniqueIdentifier>{0dab14c6-c676-4078-b18b-60be50929c01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DataAccess\CNode.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAccess\CPage.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAccess\CTree.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\CIndexer.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\CParser.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\CSearchEngine.cpp">
+      <Filter>Source Files\Lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\DataTypes.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IGeneric.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IIndexer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\INode.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IPage.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\IParser.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ISearchEngine.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ITree.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DataAccess\CNode.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="DataAccess\CPage.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="DataAccess\CTree.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\CIndexer.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\CParser.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\CSearchEngine.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

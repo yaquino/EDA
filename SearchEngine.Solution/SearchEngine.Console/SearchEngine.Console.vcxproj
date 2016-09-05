@@ -78,15 +78,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SearchEngine.Core\SearchEngine.Core.vcxproj">
-      <Project>{43cd67e7-64f8-43c2-8cfb-628f31405b27}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\SearchEngine.Lib\SearchEngine.Lib.vcxproj">
-      <Project>{5f1cd768-bf7f-47f6-bcbe-2f8b4433527b}</Project>
-    </ProjectReference>
+    <ClCompile Include="DataAccess\CNode.cpp" />
+    <ClCompile Include="DataAccess\CPage.cpp" />
+    <ClCompile Include="DataAccess\CTree.cpp" />
+    <ClCompile Include="Lib\CIndexer.cpp" />
+    <ClCompile Include="Lib\CParser.cpp" />
+    <ClCompile Include="Lib\CSearchEngine.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
+    <ClInclude Include="Core\DataTypes.h" />
+    <ClInclude Include="Core\IGeneric.h" />
+    <ClInclude Include="Core\IIndexer.h" />
+    <ClInclude Include="Core\INode.h" />
+    <ClInclude Include="Core\IPage.h" />
+    <ClInclude Include="Core\IParser.h" />
+    <ClInclude Include="Core\ISearchEngine.h" />
+    <ClInclude Include="Core\ITree.h" />
+    <ClInclude Include="DataAccess\CNode.h" />
+    <ClInclude Include="DataAccess\CPage.h" />
+    <ClInclude Include="DataAccess\CTree.h" />
+    <ClInclude Include="Lib\CIndexer.h" />
+    <ClInclude Include="Lib\CParser.h" />
+    <ClInclude Include="Lib\CSearchEngine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
