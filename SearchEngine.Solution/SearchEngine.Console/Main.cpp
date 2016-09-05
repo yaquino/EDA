@@ -9,5 +9,8 @@ int main(){
 
 	printf("hello world");
 
+	Tree<string> my_trial;
+
+
 	return 0;
 }
