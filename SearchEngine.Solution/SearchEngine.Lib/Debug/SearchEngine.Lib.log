@@ -1,6 +1,0 @@
-﻿  CSearchEngine.cpp
-  CParser.cpp
-  CIndexer.cpp
-  Generando código...
-LINK : warning LNK4068: no se especific¾ /MACHINE; estableciendo X86 como predeterminado
-  SearchEngine.Lib.vcxproj -> C:\Users\user\Source\Repos\EDA\SearchEngine.Solution\Debug\SearchEngine.Lib.lib

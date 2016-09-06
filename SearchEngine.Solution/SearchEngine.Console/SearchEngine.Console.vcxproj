@@ -53,6 +53,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\EDA\EDA\SearchEngine.Solution\SearchEngine.DataAccess;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -80,6 +81,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SearchEngine.Core\SearchEngine.Core.vcxproj">
       <Project>{43cd67e7-64f8-43c2-8cfb-628f31405b27}</Project>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <ProjectReference Include="..\SearchEngine.Lib\SearchEngine.Lib.vcxproj">
       <Project>{5f1cd768-bf7f-47f6-bcbe-2f8b4433527b}</Project>

@@ -1,12 +1,14 @@
 #pragma once
+#ifndef INODE_H
+#define INODE_H
 
 #include "DataTypes.h"
-#include "IGeneric.h"
 
 template <class T>
-class INode: IGeneric {
+class INode {
 public:
-	virtual T GetData() = 0;
-	virtual bool SetData(T) = 0;
-	virtual INode<T> GetChild(NUMBER_CHILD) = 0;
+	virtual INode<T>*& Child() = 0;
+	virtual INode<T>*& Brother() = 0;
 };
+
+#endif
