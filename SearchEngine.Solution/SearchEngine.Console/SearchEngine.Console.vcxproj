@@ -88,7 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\DataTypes.h" />
-    <ClInclude Include="Core\IGeneric.h" />
     <ClInclude Include="Core\IIndexer.h" />
     <ClInclude Include="Core\INode.h" />
     <ClInclude Include="Core\IPage.h" />

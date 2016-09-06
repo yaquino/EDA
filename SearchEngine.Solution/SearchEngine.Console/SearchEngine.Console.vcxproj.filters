@@ -56,9 +56,6 @@
     <ClInclude Include="Core\DataTypes.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Core\IGeneric.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
     <ClInclude Include="Core\IIndexer.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>

@@ -12,3 +12,5 @@ typedef	unsigned int POSITION;
 typedef	unsigned int NUMBER_CHILD;
 typedef	unsigned int NUMBER_LINES;
 
+typedef	string WORD;
+#define SIZE 5;

@@ -1,4 +1,4 @@
-#include "../Lib/CSearchEngine.h"
+#include "CSearchEngine.h"
 
 CSearchEngine::CSearchEngine() {
 }
@@ -12,7 +12,12 @@ bool CSearchEngine::Load(MEMORY _mem, FILE_NAME _file){
 	return true;
 }
 bool CSearchEngine::Search(_TOSEARCH_ _string) {
-	ITree<string> *tree;
-
-	return true;
+	ITree<string> *my_trial = new CTree<string>;
+	my_trial->Insert("abab");
+	my_trial->Insert("bc");
+	my_trial->Insert("baca");
+	if (my_trial->Search(_string)) {
+		return true;
+	}
+	return false;
 }
