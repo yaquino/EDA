@@ -1,8 +1,7 @@
 #pragma once
-#ifndef ITREE_H
-#define ITREE_H
 
 #include "DataTypes.h"
+#include "INode.h"
 template <class T>
 class ITree {
 public:
@@ -10,4 +9,3 @@ public:
 	virtual bool Search(T) = 0;
 };
 
-#endif

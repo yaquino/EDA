@@ -48,6 +48,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\EDA\EDA\SearchEngine.Solution\SearchEngine.Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -82,10 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNode.h" />
+    <ClInclude Include="CPage.h" />
     <ClInclude Include="CTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CNode.cpp" />
+    <ClCompile Include="CPage.cpp" />
     <ClCompile Include="CTree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
