@@ -13,11 +13,11 @@ bool CSearchEngine::Load(MEMORY _mem, FILE_NAME _file){
 }
 bool CSearchEngine::Search(_TOSEARCH_ _string) {	
 	ITree<string> *my_trial = new CTree<string>;
-	my_trial->Insert("abab");
+	/*my_trial->Insert("abab");
 	my_trial->Insert("bc");
 	my_trial->Insert("baca");
-	if (my_trial->Search(_string)) {
+	if (my_trial->Find(_string)) {
 		return true;
-	}
+	}*/
 	return false;
 }

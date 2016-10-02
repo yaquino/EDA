@@ -7,8 +7,8 @@ class CNode : virtual public INode<T> {
 private:
 	T key;
 	int length;
-	CNode<T>* link;
-	CNode<T>* next;
+	INode<T>* link;
+	INode<T>* next;
 
 public:
 	CNode(T, int);

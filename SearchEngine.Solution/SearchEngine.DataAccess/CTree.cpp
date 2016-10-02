@@ -1,5 +1,5 @@
-
 #include "CTree.h"
+
 template <class T>
 CTree<T>::CTree() {
 	this->root = NULL;
@@ -10,38 +10,22 @@ CTree<T>::~CTree() {
 }
 
 template <class T>
-bool CTree<T>::Insert(T key) {
-
-	CNode<T>* p = Insert(root, key);
-
-	if (!root) {
-		root = p;
-	}
-
-	return true;
-}
-
-template <class T>
-bool CTree<T>::Search(T key) {
-	if (Find(root, key))
-		return true;
-	return false;
-}
-
-template <class T>
-CNode<T>* CTree<T>::getRoot() {
+INode<T>* CTree<T>::getRoot() {
 	return root;
 }
+
 template <class T>
-bool CTree<T>::setRoot(CNode<T>* new_root) {
+bool CTree<T>::setRoot(INode<T>* new_root) {
 	/* Aca faltaa try catch o algooo */
 	root = new_root;
 	return true;
 }
+
 template <class T>
 bool CTree<T>::insertWord(WORD new_word) {
 	return true;
 }
+
 template <class T>
 int CTree<T>::Prefix(T key_a, T key_b) { // length of the biggest common prefix of x and key strings
 	for (unsigned int i = 0; i < key_a.length(); ++i) {
@@ -51,8 +35,14 @@ int CTree<T>::Prefix(T key_a, T key_b) { // length of the biggest common prefix 
 	}
 	return key_a.length();
 }
+
 template <class T>
-CNode<T>* CTree<T>::Find(CNode<T>* node, T key, int n = 0) {
+INode<T>* CTree<T>::Find(T key) {
+	return Find(root, key);
+}
+
+template <class T>
+INode<T>* CTree<T>::Find(INode<T>* node, T key, int n = 0) {
 	if (!n) {
 		n = key.length();
 	} if (!node) {
@@ -69,21 +59,31 @@ CNode<T>* CTree<T>::Find(CNode<T>* node, T key, int n = 0) {
 	}
 	return 0;
 }
-template <class T>
-CNode<T>* CTree<T>::Find(T key) {
-	return Find(root, key);
-}
-template <class T>
-void CTree<T>::Split(CNode<T>* node, int k) { // dividing node according to k key symbol
 
-	CNode<T>* p = new CNode<T>(node->getKey().substr(k, node->getLength()), node->getLength() - k);
+
+template <class T>
+void CTree<T>::Split(INode<T>* node, int k) { // dividing node according to k key symbol
+
+	INode<T>* p = new CNode<T>(node->getKey().substr(k, node->getLength()), node->getLength() - k);
 	p->Child() = node->Child();
 	node->Child() = p;
 	node->getKey().erase(k, node->getLength());
 	node->setLength(k);
 }
+
 template <class T>
-CNode<T>* CTree<T>::Insert(CNode<T>* node, T key, int n = 0) { // inserting key in tree
+bool CTree<T>::Insert(T key) {
+	INode<T>* p = Insert(root, key);
+
+	if (!root) {
+	root = p;
+	}
+
+	return true;
+}
+
+template <class T>
+INode<T>* CTree<T>::Insert(INode<T>* node, T key, int n = 0) { // inserting key in tree
 
 	if (!n) {
 		n = key.length();

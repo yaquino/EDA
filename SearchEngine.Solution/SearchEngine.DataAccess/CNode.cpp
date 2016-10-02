@@ -1,4 +1,5 @@
 #include "CNode.h"
+
 template <class T>
 CNode<T>::CNode(){}
 

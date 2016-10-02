@@ -1,25 +1,25 @@
 #pragma once
 #include "../SearchEngine.Core/ITree.h"
 #include "CNode.h"
+#include "CNode.cpp"
 
 template <class T>
 class CTree : virtual public ITree<T> {
 private:
-	CNode<T>* root;
+	INode<T>* root;
 
 public:
 	CTree();
 	~CTree();
-	bool Insert(T);
-	bool Search(T);
 
-	CNode<T>* getRoot();
-	bool setRoot(CNode<T>*);
+	INode<T>* getRoot();
+	bool setRoot(INode<T>*);
 	bool insertWord(WORD);
 	int Prefix(T, T);
-	CNode<T>* Find(CNode<T>*, T, int);
-	CNode<T>* Find(T);
-	void Split(CNode<T>*, int);
-	CNode<T>* Insert(CNode<T>*, T, int);
+	INode<T>* Find(T);
+	INode<T>* Find(INode<T>*, T, int = 0);
+	void Split(INode<T>*, int);
+	bool Insert(T);
+	INode<T>* Insert(INode<T>*, T, int = 0);
 	
 };
