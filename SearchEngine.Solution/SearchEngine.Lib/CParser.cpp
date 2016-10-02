@@ -76,9 +76,10 @@ T_BOOL CParser::ParseFile() {
 	out_file.open(url_file);
 	if (out_file.is_open()) {
 		URL_TABLE::iterator map_it;
-		for (map_it = url_table.begin(); map_it != url_table.end; ++map_it) {
+		for (map_it = url_table.begin(); map_it != url_table.end(); ++map_it) {
 			out_file << map_it->first << "\t" << map_it->second << endl;
 		}
+		out_file.close();
 		return true;
 	}
 
@@ -104,6 +105,7 @@ T_BOOL CParser::PreProcessWord(WORD &word) {
 			word.erase(i, 1);
 		}
 	}
+	return true;
 }
 T_BOOL CParser::IsStopWord(WORD word) {
 
