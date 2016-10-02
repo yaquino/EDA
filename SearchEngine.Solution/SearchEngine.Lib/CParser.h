@@ -23,5 +23,4 @@ public:
 	T_BOOL NoMark(T_CHAR&);
 	T_BOOL PreProcessWord(WORD&);
 	~CParser();
-	//bool read(FILE_NAME);
 };

@@ -137,3 +137,4 @@ T_BOOL CParser::NoMark(T_CHAR &in) {
 	}
 	return true;
 }
+CParser::~CParser() {}
