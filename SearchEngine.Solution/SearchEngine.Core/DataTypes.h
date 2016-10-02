@@ -4,7 +4,7 @@
 using namespace std;
 
 // Type definitions 
-typedef	unsigned int MEMORY;
+typedef	long long MEMORY;
 typedef	string FILE_NAME;
 typedef	string _TOSEARCH_;
 typedef	unsigned int ID_PAGE;
@@ -13,4 +13,5 @@ typedef	unsigned int NUMBER_CHILD;
 typedef	unsigned int NUMBER_LINES;
 typedef	string WORD;
 
+typedef	string WORD;
 #define SIZE 5;

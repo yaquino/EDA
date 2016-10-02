@@ -77,7 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataTypes.h" />
-    <ClInclude Include="IGeneric.h" />
     <ClInclude Include="IIndexer.h" />
     <ClInclude Include="INode.h" />
     <ClInclude Include="IPage.h" />
