@@ -19,9 +19,9 @@ public:
 	CParser(FILE_NAME, FILE_NAME);
 	T_BOOL LoadStopWord(FILE_NAME);
 	T_BOOL ParseFile();
-	T_BOOL IsStopWord(WORD);
+	T_BOOL IsStopWord(T_WORD);
 	T_BOOL IsMark(T_CHAR);
 	T_BOOL NoMark(T_CHAR&);
-	T_BOOL PreProcessWord(WORD&);
+	T_BOOL PreProcessWord(T_WORD&);
 	~CParser();
 };

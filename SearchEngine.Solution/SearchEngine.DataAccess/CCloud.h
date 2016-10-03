@@ -3,11 +3,6 @@
 #include "../SearchEngine.Core/DataTypes.h"
 #include "../SearchEngine.Core/ICloud.h"
 
-struct lista
-{
-	T_INT id;
-	vector<int> contenido;
-};
 
 template <class T>
 class CCloud : virtual public ICloud<T> {

@@ -13,6 +13,12 @@ class CSearchEngine : virtual public ISearchEngine {
 public:
 	CSearchEngine();
 	~CSearchEngine();
-	T_BOOL Load(MEMORY, FILE_NAME);
-	T_BOOL Search(_TOSEARCH_);
+	T_INT BuscarURLs(T_CHAR *, T_CHAR *, T_CHAR *, T_CHAR *);
+	T_INT IndexarURLs(T_CHAR *, T_CHAR *);
+	T_INT funcion_Matching(FILE_NAME, FILE_NAME, FILE_NAME);
+	T_INT compare(T_CHAR* , T_CHAR* );
+	void split(T_STRING , T_CHAR , V_STRING &TempBuff, T_INT &);
+	void Cuenta(T_STRING s, T_CCHAR Separadorr, T_INT &TotalChars);
+	TIPOTAM filesize(T_CHAR[]);
+	T_INT funcion_Copy(FILE_NAME, FILE_NAME);
 };
