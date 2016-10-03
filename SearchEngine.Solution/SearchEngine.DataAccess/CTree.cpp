@@ -15,14 +15,14 @@ INode<T>* CTree<T>::GetRoot() {
 }
 
 template <class T>
-bool CTree<T>::SetRoot(INode<T>* new_root) {
+T_BOOL CTree<T>::SetRoot(INode<T>* new_root) {
 	/* Aca faltaa try catch o algooo */
 	root = new_root;
 	return true;
 }
 
 template <class T>
-bool CTree<T>::InsertWord(WORD new_word) {
+T_BOOL CTree<T>::InsertWord(WORD new_word) {
 	return true;
 }
 
@@ -69,7 +69,7 @@ void CTree<T>::Split(INode<T>* node, int k) { // dividing node according to k ke
 }
 
 template <class T>
-bool CTree<T>::Insert(T key) {
+T_BOOL CTree<T>::Insert(T key) {
 	INode<T>* p = Insert(root, key);
 
 	if (!root) {

@@ -1,7 +1,10 @@
 #pragma once
 #include "DataTypes.h"
 
+template <class T>
 class ICloud {
 public:
-	virtual void Insert(int ID, int block)=0;
+	virtual T_INT Insertar(T_INT, T_INT) = 0;
 };
+
+

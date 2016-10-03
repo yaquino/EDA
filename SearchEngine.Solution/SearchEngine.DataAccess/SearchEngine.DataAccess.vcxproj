@@ -83,16 +83,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNode.h" />
-    <ClInclude Include="CPage.h" />
+    <ClInclude Include="CCloud.h" />
     <ClInclude Include="CTree.h" />
-    <ClInclude Include="Nube.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CNode.cpp" />
-    <ClCompile Include="CPage.cpp" />
     <ClCompile Include="CTree.cpp" />
-    <ClCompile Include="ED_nube.cpp" />
-    <ClCompile Include="Nube.cpp" />
+    <ClCompile Include="CCloud.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

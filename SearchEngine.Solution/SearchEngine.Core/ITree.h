@@ -6,6 +6,6 @@ template <class T>
 class ITree {
 public:
 	virtual INode<T>* Find(T) = 0;
-	virtual bool Insert(T) = 0;
+	virtual T_BOOL Insert(T) = 0;
 };
 

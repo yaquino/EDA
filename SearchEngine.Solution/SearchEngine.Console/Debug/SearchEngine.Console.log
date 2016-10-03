@@ -1,1 +1,29 @@
-﻿
+﻿  Main.cpp
+c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(52): warning C4018: '<': signed/unsigned mismatch
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(45): note: while compiling class template member function 'INode<T> *CTree<T>::Find(INode<T> *,T)'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(41): note: see reference to function template instantiation 'INode<T> *CTree<T>::Find(INode<T> *,T)' being compiled
+          with
+          [
+              T=std::string
+          ]
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(4): note: while compiling class template member function 'CTree<std::string>::CTree(void)'
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(11): note: see reference to function template instantiation 'CTree<std::string>::CTree(void)' being compiled
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(11): note: see reference to class template instantiation 'CTree<std::string>' being compiled
+c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(90): warning C4018: '<': signed/unsigned mismatch
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(83): note: while compiling class template member function 'INode<T> *CTree<T>::Insert(INode<T> *,T)'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(73): note: see reference to function template instantiation 'INode<T> *CTree<T>::Insert(INode<T> *,T)' being compiled
+          with
+          [
+              T=std::string
+          ]
+c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(92): warning C4018: '<': signed/unsigned mismatch
+c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(96): warning C4018: '<': signed/unsigned mismatch
+  SearchEngine.Console.vcxproj -> C:\Users\User\Desktop\EDA-master\EDA\SearchEngine.Solution\Debug\SearchEngine.Console.exe

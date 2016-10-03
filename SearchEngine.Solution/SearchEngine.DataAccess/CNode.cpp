@@ -15,23 +15,23 @@ T& CNode<T>::GetKey() {
 }
 
 template <class T>
-bool CNode<T>::Setkey(T new_key) {
+T_BOOL CNode<T>::Setkey(T new_key) {
 	key = new_key;
 	return true;
 }
 
 template <class T>
-int CNode<T>::GetLength() {
+T_INT CNode<T>::GetLength() {
 	return length;
 }
 
 template <class T>
-unsigned int &CNode<T>::GetCounter() {
+T_INT &CNode<T>::GetCounter() {
 	return counter;
 }
 
 template <class T>
-bool CNode<T>::SetLength(int new_length) {
+T_BOOL CNode<T>::SetLength(int new_length) {
 	length = new_length;
 	return true;
 }

@@ -18,9 +18,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IIndexer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="IParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -34,9 +31,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ISearchEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ICloud.h">
