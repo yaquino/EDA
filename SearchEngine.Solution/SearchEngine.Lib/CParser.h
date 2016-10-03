@@ -15,6 +15,7 @@ private:
 	STOPWORD_TABLE stop_words_list;
 
 public:
+	CParser() {};
 	CParser(FILE_NAME, FILE_NAME);
 	T_BOOL LoadStopWord(FILE_NAME);
 	T_BOOL ParseFile();

@@ -27,7 +27,7 @@ T_BOOL CTree<T>::InsertWord(WORD new_word) {
 }
 
 template <class T>
-int CTree<T>::Prefix(T key_a, T key_b) { // length of the biggest common prefix of x and key strings
+T_INT CTree<T>::Prefix(T key_a, T key_b) { // length of the biggest common prefix of x and key strings
 	for (unsigned int i = 0; i < key_a.length(); ++i) {
 		if (i == key_b.length() || key_a[i] != key_b[i]) {
 			return i;
@@ -59,7 +59,7 @@ INode<T>* CTree<T>::Find(INode<T>* node, T key) {
 
 
 template <class T>
-void CTree<T>::Split(INode<T>* node, int k) { // dividing node according to k key symbol
+void CTree<T>::Split(INode<T>* node, T_INT k) { // dividing node according to k key symbol
 
 	INode<T>* p = new CNode<T>(node->GetKey().substr(k, node->GetLength()), node->GetLength() - k);
 	p->Child() = node->Child();

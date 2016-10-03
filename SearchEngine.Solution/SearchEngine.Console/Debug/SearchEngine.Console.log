@@ -11,8 +11,8 @@ c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataacce
               T=std::string
           ]
   c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(4): note: while compiling class template member function 'CTree<std::string>::CTree(void)'
-  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(11): note: see reference to function template instantiation 'CTree<std::string>::CTree(void)' being compiled
-  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(11): note: see reference to class template instantiation 'CTree<std::string>' being compiled
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(15): note: see reference to function template instantiation 'CTree<std::string>::CTree(void)' being compiled
+  c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(15): note: see reference to class template instantiation 'CTree<std::string>' being compiled
 c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(90): warning C4018: '<': signed/unsigned mismatch
   c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(83): note: while compiling class template member function 'INode<T> *CTree<T>::Insert(INode<T> *,T)'
           with
