@@ -14,14 +14,9 @@ int main() {
 	my_trial->Insert("aba");
 	my_trial->Insert("bc");
 	my_trial->Insert("baca");
-	if (my_trial->Find("bac")) {
+	if (my_trial->Find("baca")) {
 		cout << "Ya encontre" << endl;
 	}
-	/*
-	ISearchEngine *search = new CSearchEngine();	
-	bool test = search->Search("bac");
-	cout << test << endl;
-	*/
 
 	return 0;
 }

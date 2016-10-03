@@ -12,14 +12,14 @@ public:
 	CTree();
 	~CTree();
 
-	INode<T>* getRoot();
-	bool setRoot(INode<T>*);
-	bool insertWord(WORD);
+	INode<T>* GetRoot();
+	bool SetRoot(INode<T>*);
+	bool InsertWord(WORD);
 	int Prefix(T, T);
 	INode<T>* Find(T);
-	INode<T>* Find(INode<T>*, T, int = 0);
+	INode<T>* Find(INode<T>*, T);
 	void Split(INode<T>*, int);
 	bool Insert(T);
-	INode<T>* Insert(INode<T>*, T, int = 0);
+	INode<T>* Insert(INode<T>*, T);
 	
 };

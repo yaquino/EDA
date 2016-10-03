@@ -6,7 +6,8 @@ template <class T>
 class CNode : virtual public INode<T> {
 private:
 	T key;
-	int length;
+	unsigned int counter;
+	int length;	
 	INode<T>* link;
 	INode<T>* next;
 
@@ -15,10 +16,11 @@ public:
 	CNode();
 	~CNode();
 		
-	T& getKey();
-	bool setkey(T);
-	int getLength();
-	bool setLength(int);
+	T& GetKey();
+	bool Setkey(T);
+	int GetLength();
+	unsigned int& GetCounter();
+	bool SetLength(int);
 	INode<T>*& Child();
 	INode<T>*& Brother();
 

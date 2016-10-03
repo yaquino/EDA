@@ -4,9 +4,10 @@
 template <class T>
 class INode {
 public:
-	virtual T& getKey() = 0;
-	virtual int getLength() = 0;
-	virtual bool setLength(int) = 0;
+	virtual T& GetKey() = 0;
+	virtual int GetLength() = 0;
+	virtual bool SetLength(int) = 0;
+	virtual unsigned int &GetCounter() = 0;
 	virtual INode<T>*& Child() = 0;
 	virtual INode<T>*& Brother() = 0;
 };

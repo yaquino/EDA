@@ -10,19 +10,19 @@ CTree<T>::~CTree() {
 }
 
 template <class T>
-INode<T>* CTree<T>::getRoot() {
+INode<T>* CTree<T>::GetRoot() {
 	return root;
 }
 
 template <class T>
-bool CTree<T>::setRoot(INode<T>* new_root) {
+bool CTree<T>::SetRoot(INode<T>* new_root) {
 	/* Aca faltaa try catch o algooo */
 	root = new_root;
 	return true;
 }
 
 template <class T>
-bool CTree<T>::insertWord(WORD new_word) {
+bool CTree<T>::InsertWord(WORD new_word) {
 	return true;
 }
 
@@ -42,33 +42,30 @@ INode<T>* CTree<T>::Find(T key) {
 }
 
 template <class T>
-INode<T>* CTree<T>::Find(INode<T>* node, T key, int n = 0) {
-	if (!n) {
-		n = key.length();
-	} if (!node) {
+INode<T>* CTree<T>::Find(INode<T>* node, T key) {
+	if (!node) {
 		return 0;
 	}
-	int k = Prefix(key, node->getKey());
+	int k = Prefix(key, node->GetKey());
 	if (k == 0) {
-		return Find(node->Brother(), key, n); // let’s look for the child’s node
-	} if (k == n) {
+		return Find(node->Brother(), key); // let’s look for the child’s node
+	} if (k < node->GetLength()) {
+		return 0;
+	} if (k == key.length()) {
 		return node;
 	}
-	if (k == node->getLength()) {
-		return Find(node->Child(), key.substr(k, key.length()), n - k); // let’s look for at the child’s node
-	}
-	return 0;
+	return Find(node->Child(), key.substr(k, key.length()));
 }
 
 
 template <class T>
 void CTree<T>::Split(INode<T>* node, int k) { // dividing node according to k key symbol
 
-	INode<T>* p = new CNode<T>(node->getKey().substr(k, node->getLength()), node->getLength() - k);
+	INode<T>* p = new CNode<T>(node->GetKey().substr(k, node->GetLength()), node->GetLength() - k);
 	p->Child() = node->Child();
 	node->Child() = p;
-	node->getKey().erase(k, node->getLength());
-	node->setLength(k);
+	node->GetKey().erase(k, node->GetLength());
+	node->SetLength(k);
 }
 
 template <class T>
@@ -83,23 +80,24 @@ bool CTree<T>::Insert(T key) {
 }
 
 template <class T>
-INode<T>* CTree<T>::Insert(INode<T>* node, T key, int n = 0) { // inserting key in tree
-
-	if (!n) {
-		n = key.length();
-	} if (!node) {
-		return new CNode<T>(key, n);
+INode<T>* CTree<T>::Insert(INode<T>* node, T key) { // inserting key in tree
+	if (!node) {
+		return new CNode<T>(key, key.length());
 	}
-	int k = Prefix(key, node->getKey());
+	int k = Prefix(key, node->GetKey());
 	if (k == 0) {
-		node->Brother() = Insert(node->Brother(), key, n);
-	}
-	else if (k < n) {
-		if (k < node->getLength()) { // cut or not to cut?
-			Split(node, k);
+		return node->Brother() = Insert(node->Brother(), key);
+	} if (k < node->GetLength()) { // cut or not to cut?
+		Split(node, k);
+		if (k < key.length()) {
+			node->Child() = Insert(node->Child(), key.substr(k, key.length()));
 		}
-		node->Child() = Insert(node->Child(), key.substr(k, key.length()), n - k);
-	}
+		return node;
+	} if (k < key.length()) {
+		node->Child() = Insert(node->Child(), key.substr(k, key.length()));
+	} else {
+		++node->GetCounter();
+	} 
 	return node;
 }
 
