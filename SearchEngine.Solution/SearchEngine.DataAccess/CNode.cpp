@@ -4,10 +4,10 @@ template <class T>
 CNode<T>::CNode(): counter(0){}
 
 template <class T>
-CNode<T>::~CNode() {}
+CNode<T>::CNode(T new_key, int set_lenght, int set_counter = 0) : key(new_key), length(set_lenght), counter(set_counter) {};
 
 template <class T>
-CNode<T>::CNode(T new_key, int set_lenght) : key(new_key), length(set_lenght), counter(0) {};
+CNode<T>::~CNode() {}
 
 template <class T>
 T& CNode<T>::GetKey() {
@@ -26,14 +26,14 @@ T_INT CNode<T>::GetLength() {
 }
 
 template <class T>
-T_INT &CNode<T>::GetCounter() {
-	return counter;
-}
-
-template <class T>
 T_BOOL CNode<T>::SetLength(int new_length) {
 	length = new_length;
 	return true;
+}
+
+template <class T>
+T_INT &CNode<T>::GetCounter() {
+	return counter;
 }
 
 template <class T>

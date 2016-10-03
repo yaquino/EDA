@@ -1,4 +1,15 @@
 ﻿  CTree.cpp
-CTree.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-CNode.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-  SearchEngine.DataAccess.vcxproj -> C:\Users\User\Desktop\EDA-master\EDA\SearchEngine.Solution\Debug\SearchEngine.DataAccess.lib
+d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): error C2244: 'CTree<T>::Insert': unable to match function definition to an existing declaration
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(72): note: see declaration of 'CTree<T>::Insert'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): note: definition
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): note: 'T_BOOL CTree<T>::Insert(T)'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): note: existing declarations
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): note: 'INode<T> *CTree<T>::Insert(INode<T> *,T)'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(80): note: 'T_BOOL CTree<T>::Insert(T,int)'
+d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): error C2244: 'CTree<T>::Insert': unable to match function definition to an existing declaration
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(83): note: see declaration of 'CTree<T>::Insert'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): note: definition
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): note: 'INode<T> *CTree<T>::Insert(INode<T> *,T,int)'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): note: existing declarations
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): note: 'INode<T> *CTree<T>::Insert(INode<T> *,T)'
+  d:\i - semestre\estructura de datos y algoritmos\eda\searchengine.solution\searchengine.dataaccess\ctree.cpp(104): note: 'T_BOOL CTree<T>::Insert(T,int)'

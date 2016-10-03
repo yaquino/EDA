@@ -19,7 +19,10 @@ public:
 	INode<T>* Find(T);
 	INode<T>* Find(INode<T>*, T);
 	void Split(INode<T>*, T_INT);
-	T_BOOL Insert(T);
-	INode<T>* Insert(INode<T>*, T);
-	
+	T_BOOL Insert(T, int);
+	INode<T>* Insert(INode<T>*, T, int);
+	void TraversalSave(INode<T>*, ofstream&);
+	void Save(string);
+	void TraversalLoad(INode<T>*&, ifstream&, istringstream&);
+	void Load(string);
 };
