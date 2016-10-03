@@ -1,5 +1,4 @@
 #pragma once
-#include "../SearchEngine.Core/ICloud.h"
 #include <vector>
 #include <string>
 #include <stdio.h>
@@ -11,7 +10,7 @@ struct lista
 	std::vector<int> contenido;
 };
 
-class Nube:virtual ICloud
+class Nube
 {
 private:
 	std::vector<lista> nucleo;
@@ -28,6 +27,8 @@ public:
 
 	int Insertar(int id_doc, int bloque);
 
+	void setNombre(std::string nombre);
+	int getNumber_doc();
 	void guardar();
 	void cargar();
 	void Insertar(std::string nombre, int id_doc, int bloque);

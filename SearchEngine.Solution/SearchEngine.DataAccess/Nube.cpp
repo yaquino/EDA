@@ -35,16 +35,36 @@ int Nube::Insertar(int id_doc, int bloque)
 	return 2;
 }
 
+void Nube::setNombre(std::string nombre)
+{
+	palabra_actual = nombre;
+}
+
+int Nube::getNumber_doc()
+{
+	return nucleo.size();
+}
+
 void Nube::guardar()
 {
 	int m;
-	int n = nucleo.capacity();
+	int n = nucleo.size();
+	std::string temp;
+	fopen_s(&archivo, ("Nube\\" + palabra_actual + ".txt").data(), "w+");
+	if (archivo == NULL)
+		return;
 	for (int i = 0;i < n;i++)
 	{
-		m = nucleo[i].contenido.capacity();
+		temp = std::to_string(nucleo[i].id);
+		m = nucleo[i].contenido.size();
 		for (int j = 0;j < m;j++)
-			Insertar(palabra_actual, nucleo[i].id, nucleo[i].contenido[j]);
+		{
+			temp = temp + " " + std::to_string(nucleo[i].contenido[j]);
+		}
+		temp = temp + "\n";
+		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
 	}
+	fclose(archivo);
 }
 
 void Nube::Insertar(std::string nombre, int id_doc, int bloque)
