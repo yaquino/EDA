@@ -1,0 +1,3 @@
+﻿  CSearchEngine.cpp
+LINK : warning LNK4068: /MACHINE not specified; defaulting to X86
+  SearchEngine.Lib.vcxproj -> C:\Users\User\Desktop\EDA-master\EDA\SearchEngine.Solution\Debug\SearchEngine.Lib.lib

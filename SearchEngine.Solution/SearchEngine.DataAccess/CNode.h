@@ -5,11 +5,23 @@ class Node : public INode<T> {
 
 private:
 	T key;
-	int length;
-	Node<T>* link;
-	Node<T>* next;
+	T_INT counter;
+	T_INT length;	
+	INode<T>* link;
+	INode<T>* next;
 
 public:
+	CNode(T, int);
+	CNode();
+	~CNode();
+		
+	T& GetKey();
+	T_BOOL Setkey(T);
+	T_INT GetLength();
+	T_INT& GetCounter();
+	T_BOOL SetLength(int);
+	INode<T>*& Child();
+	INode<T>*& Brother();
 
 	Node(T new_key, int set_lenght) : key(new_key), length(set_lenght) {};
 

@@ -24,7 +24,7 @@
     <ClInclude Include="CTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CPage.h">
+    <ClInclude Include="CCloud.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="CTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CPage.cpp">
+    <ClCompile Include="CCloud.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

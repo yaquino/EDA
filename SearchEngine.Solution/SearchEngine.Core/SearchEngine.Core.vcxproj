@@ -77,9 +77,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataTypes.h" />
-    <ClInclude Include="IIndexer.h" />
+    <ClInclude Include="ICloud.h" />
     <ClInclude Include="INode.h" />
-    <ClInclude Include="IPage.h" />
     <ClInclude Include="IParser.h" />
     <ClInclude Include="ISearchEngine.h" />
     <ClInclude Include="ITree.h" />

@@ -1,31 +1,37 @@
 #include "CNode.h"
+
 template <class T>
-CNode<T>::CNode(){}
+CNode<T>::CNode(): counter(0){}
 
 template <class T>
 CNode<T>::~CNode() {}
 
 template <class T>
-CNode<T>::CNode(T new_key, int set_lenght) : key(new_key), length(set_lenght) {};
+CNode<T>::CNode(T new_key, int set_lenght) : key(new_key), length(set_lenght), counter(0) {};
 
 template <class T>
-T& CNode<T>::getKey() {
+T& CNode<T>::GetKey() {
 	return key;
 }
 
 template <class T>
-bool CNode<T>::setkey(T new_key) {
+T_BOOL CNode<T>::Setkey(T new_key) {
 	key = new_key;
 	return true;
 }
 
 template <class T>
-int CNode<T>::getLength() {
+T_INT CNode<T>::GetLength() {
 	return length;
 }
 
 template <class T>
-bool CNode<T>::setLength(int new_length) {
+T_INT &CNode<T>::GetCounter() {
+	return counter;
+}
+
+template <class T>
+T_BOOL CNode<T>::SetLength(int new_length) {
 	length = new_length;
 	return true;
 }
