@@ -18,12 +18,11 @@ public:
 	CCloud();
 	CCloud(T_STRING nombre);
 	~CCloud();
-	FILE_NAME GetName();
+	T_STRING GetName();
 	NUMBER_LINES GetNumberLines();	
 	T_INT Insertar(T_INT id_doc, T_INT bloque);
-	void setNombre(T_STRING nombre);
+	void setName(T_STRING nombre);
 	T_INT getNumber_doc();
 	void guardar();
-	void cargar();
-	void Insertar(T_STRING nombre, T_INT id_doc, T_INT bloque);
+	void Insertar(T_STRING nombre, T_INT id_doc, T_INT bloque);//obsoleto
 };

@@ -1,5 +1,1 @@
-﻿  Main.cpp
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(60): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(25): warning C4101: 'number': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.console\main.cpp(28): warning C4101: 'option': unreferenced local variable
-  SearchEngine.Console.vcxproj -> C:\Users\User\Desktop\EDA-master\EDA\SearchEngine.Solution\Debug\SearchEngine.Console.exe
+﻿

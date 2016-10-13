@@ -1,4 +1,5 @@
 #include "CCloud.h"
+
 template <class T>
 CCloud<T>::CCloud()
 {
@@ -7,24 +8,27 @@ CCloud<T>::CCloud()
 	archivo = NULL;
 	ejecutando = false;
 }
+
 template <class T>
 CCloud<T>::CCloud(T_STRING nombre)
 {
-	palabra_actual = nombre;
+	palabra_actual = move(nombre);
+	documento_actual = -1;
+	archivo = NULL;
+	ejecutando = false;
 }
+
 template <class T>
 T_INT CCloud<T>::Insertar(T_INT id_doc, T_INT bloque)
 {
-	std::vector<lista>::iterator it = nucleo.begin();
-	while (it != nucleo.end())
+	for (lista & actual : nucleo)
 	{
-		if ((*it).id != id_doc)
-			it++;
-		else
-		{
-			(*it).contenido.push_back(bloque);
+		if (actual.id == id_doc)
+		{ 
+			actual.contenido.push_back(bloque);
 			return 1;
 		}
+			
 	}
 	lista nueva;
 	nueva.id = id_doc;
@@ -32,41 +36,45 @@ T_INT CCloud<T>::Insertar(T_INT id_doc, T_INT bloque)
 	nucleo.push_back(nueva);
 	return 2;
 }
+
 template <class T>
-void CCloud<T>::setNombre(T_STRING nombre)
+void CCloud<T>::setName(T_STRING nombre)
 {
-	palabra_actual = nombre;
+	palabra_actual = move(nombre);
 }
+
 template <class T>
 T_INT CCloud<T>::getNumber_doc()
 {
 	return nucleo.size();
 }
+
 template <class T>
 void CCloud<T>::guardar()
 {
-	int m;
-	int n = nucleo.size();
 	std::string temp;
 	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
 	if (archivo == NULL)
 		return;
-	for (int i = 0;i < n;i++)
+
+	for (lista & elem : nucleo)
 	{
-		temp = std::to_string(nucleo[i].id);
-		m = nucleo[i].contenido.size();
-		for (int j = 0;j < m;j++)
+		temp = std::to_string(elem.id);
+		for (T_INT & ele_A:elem.contenido)
 		{
-			temp = temp + " " + std::to_string(nucleo[i].contenido[j]);
+			temp = temp + " " + std::to_string(ele_A);
 		}
 		temp = temp + "\n";
 		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
 	}
+	
 	fclose(archivo);
 }
+
 template <class T>
 void CCloud<T>::Insertar(T_STRING nombre, T_INT id_doc, T_INT bloque)
 {
+	//obsoleto
 	if (!ejecutando)
 		abrir_doc(nombre);
 	if (nombre.compare(palabra_actual) != 0)
@@ -98,6 +106,8 @@ void CCloud<T>::Insertar(T_STRING nombre, T_INT id_doc, T_INT bloque)
 	}
 
 }
+
+
 template <class T>
 void CCloud<T>::abrir_doc(T_STRING nombre)
 {
@@ -105,6 +115,7 @@ void CCloud<T>::abrir_doc(T_STRING nombre)
 	palabra_actual = nombre;
 	ejecutando = true;
 }
+
 template <class T>
 void CCloud<T>::cambiar_doc(T_STRING nombre)
 {
@@ -118,4 +129,16 @@ template <class T>
 CCloud<T>::~CCloud()
 {
 	_fcloseall();
+}
+
+template<class T>
+T_STRING CCloud<T>::GetName()
+{
+	return palabra_actual;
+}
+
+template<class T>
+NUMBER_LINES CCloud<T>::GetNumberLines()
+{
+	return nucleo.size();
 }

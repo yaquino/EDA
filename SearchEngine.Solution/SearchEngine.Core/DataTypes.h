@@ -56,5 +56,5 @@ struct Indice
 struct lista
 {
 	T_INT id;
-	vector<int> contenido;
+	vector<T_INT> contenido;
 };

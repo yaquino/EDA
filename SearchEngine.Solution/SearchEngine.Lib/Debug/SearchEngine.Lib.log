@@ -1,13 +1,1 @@
-﻿  CSearchEngine.cpp
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(8): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(22): warning C4018: '<': signed/unsigned mismatch
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(163): warning C4101: 'numero': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(162): warning C4101: 'IDDoc': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(162): warning C4101: 'desde': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(164): warning C4101: 'ch': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(162): warning C4101: 'hasta': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(210): warning C4244: 'initializing': conversion from 'TIPOTAM' to 'unsigned int', possible loss of data
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(195): warning C4101: 'numero': unreferenced local variable
-c:\users\user\desktop\eda-master\eda\searchengine.solution\searchengine.lib\csearchengine.cpp(196): warning C4101: 'ch': unreferenced local variable
-LINK : warning LNK4068: /MACHINE not specified; defaulting to X86
-  SearchEngine.Lib.vcxproj -> C:\Users\User\Desktop\EDA-master\EDA\SearchEngine.Solution\Debug\SearchEngine.Lib.lib
+﻿
