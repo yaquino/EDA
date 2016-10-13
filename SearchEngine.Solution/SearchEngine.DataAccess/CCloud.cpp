@@ -49,10 +49,14 @@ T_INT CCloud<T>::getNumber_doc()
 	return nucleo.size();
 }
 
+
+
+
 template <class T>
 void CCloud<T>::guardar()
 {
-	std::string temp;
+	std::thread(hilo_guardar).detach();
+	/*std::string temp;
 	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
 	if (archivo == NULL)
 		return;
@@ -68,7 +72,7 @@ void CCloud<T>::guardar()
 		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
 	}
 	
-	fclose(archivo);
+	fclose(archivo);*/
 }
 
 template <class T>
@@ -123,6 +127,27 @@ void CCloud<T>::cambiar_doc(T_STRING nombre)
 	fopen_s(&archivo, (nombre + ".txt").data(), "w+");
 	palabra_actual = nombre;
 	documento_actual = -1;
+}
+
+template<class T>
+void CCloud<T>::hilo_guardar()
+{
+	std::string temp;
+	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
+	if (archivo == NULL)
+		return;
+
+	for (lista & elem : nucleo)
+	{
+		temp = std::to_string(elem.id);
+		for (T_INT & ele_A : elem.contenido)
+		{
+			temp = temp + " " + std::to_string(ele_A);
+		}
+		temp = temp + "\n";
+		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
+	}
+	fclose(archivo);
 }
 
 template <class T>

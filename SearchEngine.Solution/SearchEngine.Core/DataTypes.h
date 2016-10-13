@@ -17,6 +17,7 @@
 #include <conio.h>
 #include <time.h>
 #include <cstdlib>
+#include <thread>
 using namespace std;
 
 // Type definitions 

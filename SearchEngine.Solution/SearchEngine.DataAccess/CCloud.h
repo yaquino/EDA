@@ -14,6 +14,7 @@ private:
 	T_BOOL ejecutando;
 	void abrir_doc(T_STRING nombre);
 	void cambiar_doc(T_STRING nombre);
+	void hilo_guardar();
 public:
 	CCloud();
 	CCloud(T_STRING nombre);
