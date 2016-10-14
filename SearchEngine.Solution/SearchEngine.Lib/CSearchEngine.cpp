@@ -235,22 +235,6 @@ void CSearchEngine::CargarFileOrigen(ifstream &fOrigen, T_CHAR *&mOrigen, TIPOTA
 	mOrigen[cantidad] = '\0';		
 }
 
-
-T_INT CSearchEngine::CargarFileOrigen_2(T_CHAR *FileOrigen, T_CHAR *&mOrigen, TIPOTAM desde,TIPOTAM cantidad)
-{
-	ifstream fOrigen(FileOrigen);
-	if (fOrigen.fail()) {
-		cerr << "Error al abrir el archivo: " << FileOrigen << endl; return 0;
-	}
-	else {
-		fOrigen.seekg(desde);
-		fOrigen.read((T_CHAR *)(mOrigen), cantidad);
-		mOrigen[cantidad] = '\0';
-		fOrigen.close();
-	}
-	return 1;
-}
-
 /*
 * Para hacer la busqueda de las URLs
 */
