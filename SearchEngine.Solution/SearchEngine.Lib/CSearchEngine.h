@@ -13,6 +13,9 @@ class CSearchEngine : virtual public ISearchEngine {
 public:
 	CSearchEngine();
 	~CSearchEngine();
+	TIPOTAM CargarIds(T_CHAR *, TIPOTAM *&);
+	TIPOTAM CargarIndexOrigen(T_CHAR *, Indice *&);
+	void CargarFileOrigen(ifstream &, T_CHAR *&, TIPOTAM , TIPOTAM);
 	T_INT BuscarURLs(T_CHAR *, T_CHAR *, T_CHAR *, T_CHAR *);
 	T_INT IndexarURLs(T_CHAR *, T_CHAR *);
 	T_INT funcion_Matching(FILE_NAME, FILE_NAME, FILE_NAME);
