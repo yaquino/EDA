@@ -22,11 +22,13 @@ using namespace std;
 // Type definitions 
 typedef bool T_BOOL;
 typedef char T_CHAR;
+typedef double T_DOUBLE;
 typedef unsigned int T_INT;
 typedef long long T_LONGLONG;
 typedef long long TIPOTAM;
 typedef const char T_CCHAR;
 
+typedef	long T_LONG;
 typedef	long long MEMORY;
 typedef	string FILE_NAME;
 typedef	string _TOSEARCH_;
@@ -44,8 +46,13 @@ typedef vector<string> V_STRING;
 typedef	string T_WORD;
 typedef	string LINE;
 typedef	string T_STRING;
-#define BLOQUELINEA (128000)
-#define BLOQUE (1920)//1024+512+256+128)// tamaño donde se realiza la copia de manera algo mas rapida
+
+const T_LONGLONG BLOQUELINEA = 128000;
+const T_LONG BLOQUE = 1920;
+const T_LONGLONG BLOQUEMEMORIA = 268435456; 
+const T_LONGLONG MAX_ID = 4000000;
+const T_LONGLONG TPAGINA = 750000;
+
 #define SIZE 5;
 
 struct Indice
