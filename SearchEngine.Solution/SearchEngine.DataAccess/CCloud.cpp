@@ -3,10 +3,10 @@
 template <class T>
 CCloud<T>::CCloud()
 {
-	palabra_actual = "";
+	palabra_actual = ""s;
 	documento_actual = -1;
 	archivo = NULL;
-	ejecutando = false;
+	existe_arch = false;
 }
 
 template <class T>
@@ -15,13 +15,15 @@ CCloud<T>::CCloud(T_STRING nombre)
 	palabra_actual = move(nombre);
 	documento_actual = -1;
 	archivo = NULL;
-	ejecutando = false;
+	existe_arch = false;
 }
 
 template <class T>
 T_INT CCloud<T>::Insertar(T_INT id_doc, T_INT bloque)
 {
-	for (lista & actual : nucleo)
+	nucleo[id_doc].push_back(bloque);
+	
+	/*for (lista & actual : nucleo)
 	{
 		if (actual.id == id_doc)
 		{ 
@@ -34,7 +36,10 @@ T_INT CCloud<T>::Insertar(T_INT id_doc, T_INT bloque)
 	nueva.id = id_doc;
 	nueva.contenido.push_back(bloque);
 	nucleo.push_back(nueva);
+	return 2;*/
+
 	return 2;
+	
 }
 
 template <class T>
@@ -49,13 +54,39 @@ T_INT CCloud<T>::getNumber_doc()
 	return nucleo.size();
 }
 
+template<class T>
+T_BOOL CCloud<T>::existe_archivo()
+{
+	return existe_arch;
+}
 
 
+template<class T>
+void CCloud<T>::hilo_guardar()
+{
+	std::string temp;
+	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
+	if (archivo == NULL)
+		return;
+
+	for (pair<T_INT,vector<T_INT>> elem : nucleo)
+	{
+		temp = std::to_string(elem.first);
+		for (T_INT block : elem.second)
+		{
+			temp = temp + " "s + std::to_string(block);
+		}
+		temp = temp + "\n"s;
+		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
+	}
+	fclose(archivo);
+}
 
 template <class T>
 void CCloud<T>::guardar()
 {
 	std::thread(hilo_guardar).detach();
+	existe_arch = true;
 	/*std::string temp;
 	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
 	if (archivo == NULL)
@@ -129,26 +160,7 @@ void CCloud<T>::cambiar_doc(T_STRING nombre)
 	documento_actual = -1;
 }
 
-template<class T>
-void CCloud<T>::hilo_guardar()
-{
-	std::string temp;
-	fopen_s(&archivo, ("CCloud\\" + palabra_actual + ".txt").data(), "w+");
-	if (archivo == NULL)
-		return;
 
-	for (lista & elem : nucleo)
-	{
-		temp = std::to_string(elem.id);
-		for (T_INT & ele_A : elem.contenido)
-		{
-			temp = temp + " " + std::to_string(ele_A);
-		}
-		temp = temp + "\n";
-		fwrite(temp.data(), sizeof(char), temp.length(), archivo);
-	}
-	fclose(archivo);
-}
 
 template <class T>
 CCloud<T>::~CCloud()

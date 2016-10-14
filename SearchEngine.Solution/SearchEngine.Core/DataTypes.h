@@ -45,8 +45,8 @@ typedef vector<string> V_STRING;
 typedef	string T_WORD;
 typedef	string LINE;
 typedef	string T_STRING;
-#define BLOQUELINEA (128000)
-#define BLOQUE (1920)//1024+512+256+128)// tamaño donde se realiza la copia de manera algo mas rapida
+#define BLOQUELINEA (128'000)
+#define BLOQUE (1'920)//1024+512+256+128)// tamaño donde se realiza la copia de manera algo mas rapida
 #define SIZE 5;
 
 struct Indice

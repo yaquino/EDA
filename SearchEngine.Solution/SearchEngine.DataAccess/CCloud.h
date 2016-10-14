@@ -7,11 +7,12 @@
 template <class T>
 class CCloud : virtual public ICloud<T> {
 private:
-	vector<lista> nucleo;
+	map<int,vector<int>> nucleo;
 	T_STRING palabra_actual;
 	T_INT documento_actual;
 	FILE *archivo;
 	T_BOOL ejecutando;
+	T_BOOL existe_arch;
 	void abrir_doc(T_STRING nombre);
 	void cambiar_doc(T_STRING nombre);
 	void hilo_guardar();
@@ -24,6 +25,7 @@ public:
 	T_INT Insertar(T_INT id_doc, T_INT bloque);
 	void setName(T_STRING nombre);
 	T_INT getNumber_doc();
+	T_BOOL existe_archivo();
 	void guardar();
 	void Insertar(T_STRING nombre, T_INT id_doc, T_INT bloque);//obsoleto
 };
