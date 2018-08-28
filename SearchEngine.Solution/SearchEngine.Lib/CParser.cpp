@@ -3,14 +3,17 @@
 CParser::CParser(FILE_NAME input, FILE_NAME output) : input_file(input), url_file(output) {}
 
 T_BOOL CParser::LoadStopWord(FILE_NAME stop_word_file) {
-	file.open(stop_word_file);
-	if (file.is_open()) {
-		WORD word;
-		while (!file.eof()) {
-			file >> word;
+	READ_FILE swfile;
+	swfile.open(stop_word_file);
+	if (swfile.is_open()) {
+
+		T_WORD word;
+
+		while (!swfile.eof()) {
+			swfile >> word;
 			stop_words_list.insert(word);
 		}
-		file.close();
+		swfile.close();
 		return true;
 	}
 	return false;
@@ -29,7 +32,7 @@ T_BOOL CParser::ParseFile() {
 		T_INT document_id = 1;
 		T_INT document_block;
 		LINE url, content;
-		WORD word;
+		T_WORD word;
 		istringstream iss;
 
 		/*
@@ -92,7 +95,7 @@ Before inserting a word into the structure,
 each word is set to lowcase and marks are eliminated
 (e.g. punctuaction signs, á, ñ, etc)
 */
-T_BOOL CParser::PreProcessWord(WORD &word) {
+T_BOOL CParser::PreProcessWord(T_WORD &word) {
 
 	std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 	for (T_INT i = 0; i < word.length(); ++i) {
@@ -107,7 +110,7 @@ T_BOOL CParser::PreProcessWord(WORD &word) {
 	}
 	return true;
 }
-T_BOOL CParser::IsStopWord(WORD word) {
+T_BOOL CParser::IsStopWord(T_WORD word) {
 
 	return stop_words_list.find(word) != stop_words_list.end();
 }

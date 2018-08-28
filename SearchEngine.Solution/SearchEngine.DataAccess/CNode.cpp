@@ -1,7 +1,7 @@
 #include "CNode.h"
 
 template <class T>
-CNode<T>::CNode(): counter(0){}
+CNode<T>::CNode() : counter(0) {}
 
 template <class T>
 CNode<T>::CNode(T new_key, int set_lenght, int set_counter = 0) : key(new_key), length(set_lenght), counter(set_counter) {};
