@@ -37,6 +37,7 @@ typedef	unsigned int ID_PAGE;
 typedef	unsigned int POSITION;
 typedef	unsigned int NUMBER_CHILD;
 typedef	unsigned int NUMBER_LINES;
+typedef	string WORD;
 
 typedef ifstream READ_FILE;
 typedef ofstream WRITE_FILE;

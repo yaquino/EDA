@@ -1,1 +1,3 @@
-﻿
+﻿  CSearchEngine.cpp
+LINK : warning LNK4068: /MACHINE not specified; defaulting to X86
+  SearchEngine.Lib.vcxproj -> D:\I - Semestre\Estructura de Datos y Algoritmos\EDA\SearchEngine.Solution\Debug\SearchEngine.Lib.lib

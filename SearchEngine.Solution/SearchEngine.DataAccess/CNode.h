@@ -21,7 +21,8 @@ public:
 	T_BOOL Setkey(T);
 	T_INT GetLength();
 	T_BOOL SetLength(int);
-	T_INT& GetCounter();
+	T_INT& GetCounter();	
+
 	INode<T>*& Child();
 	INode<T>*& Brother();
 
