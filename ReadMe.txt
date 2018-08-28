@@ -1,14 +1,12 @@
-========================================================================
+﻿========================================================================
     PROYECTO DE EDA
 ========================================================================
 DESCRIPCIÓN:
-Este proyecto es...
-Interesante.
+Este proyecto realiza la indexación de wikipedia y la busqueda en todos los archivos indexados.
 
 /////////////////////////////////////////////////////////////////////////////
 OTHER NOTES:
-Los creadores no se responsabilizan por datos perdidos.
-Usar bajo su propio riesgo.
 
+finalizado. Use bajo su propio riesgo.
 
 /////////////////////////////////////////////////////////////////////////////

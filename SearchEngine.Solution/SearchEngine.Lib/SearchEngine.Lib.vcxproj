@@ -84,7 +84,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CIndexer.h" />
     <ClInclude Include="CParser.h" />
     <ClInclude Include="CSearchEngine.h" />
   </ItemGroup>
@@ -92,7 +91,6 @@
     <ResourceCompile Include="SearchEngine.Lib.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CIndexer.cpp" />
     <ClCompile Include="CParser.cpp" />
     <ClCompile Include="CSearchEngine.cpp" />
   </ItemGroup>

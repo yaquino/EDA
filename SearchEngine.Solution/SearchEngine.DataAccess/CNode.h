@@ -4,21 +4,25 @@
 
 template <class T>
 class CNode : virtual public INode<T> {
+
 private:
 	T key;
-	int length;
-	CNode<T>* link;
-	CNode<T>* next;
+	T_INT counter;
+	T_INT length;
+	INode<T>* link;
+	INode<T>* next;
 
 public:
-	CNode(T, int);
 	CNode();
+	CNode(T, int, int = 0);
 	~CNode();
-		
-	T& getKey();
-	bool setkey(T);
-	int getLength();
-	bool setLength(int);
+
+	T& GetKey();
+	T_BOOL Setkey(T);
+	T_INT GetLength();
+	T_BOOL SetLength(int);
+	T_INT& GetCounter();	
+
 	INode<T>*& Child();
 	INode<T>*& Brother();
 

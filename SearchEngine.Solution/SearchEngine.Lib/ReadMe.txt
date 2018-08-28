@@ -2,28 +2,10 @@
     STATIC LIBRARY : SearchEngine.Lib Project Overview
 ========================================================================
 
-AppWizard has created this SearchEngine.Lib library project for you.
-
-No source files were created as part of your project.
-
-
-SearchEngine.Lib.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-SearchEngine.Lib.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+En esta parte de la aplicacion se encuentra el parseador del archivo general y las funciones necesarias para hacer la busqueda una vez encontrada la palabra en el árbol.
 
 /////////////////////////////////////////////////////////////////////////////
 Other notes:
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
