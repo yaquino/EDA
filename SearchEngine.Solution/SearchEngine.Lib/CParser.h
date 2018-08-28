@@ -6,8 +6,13 @@
 class CParser : virtual public IParser {
 
 private:
+<<<<<<< HEAD
+	
+	READ_FILE file; 
+=======
 
 	READ_FILE file;
+>>>>>>> master
 	WRITE_FILE out_file;
 	FILE_NAME input_file; // name of the file containing the documents
 	FILE_NAME url_file; // name of the file where the id-url pairs are stored
@@ -15,6 +20,17 @@ private:
 	STOPWORD_TABLE stop_words_list;
 
 public:
+<<<<<<< HEAD
+	CParser(FILE_NAME, FILE_NAME);
+	T_BOOL LoadStopWord(FILE_NAME);
+	T_BOOL ParseFile();
+	T_BOOL IsStopWord(WORD);
+	T_BOOL IsMark(T_CHAR);
+	T_BOOL NoMark(T_CHAR&);
+	T_BOOL PreProcessWord(WORD&);
+	~CParser();
+};
+=======
 	CParser() {};
 	CParser(FILE_NAME, FILE_NAME);
 	T_BOOL LoadStopWord(FILE_NAME);
@@ -25,3 +41,4 @@ public:
 	T_BOOL PreProcessWord(T_WORD&);
 	~CParser();
 };
+>>>>>>> master
