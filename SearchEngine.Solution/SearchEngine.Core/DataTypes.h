@@ -17,6 +17,7 @@
 #include <conio.h>
 #include <time.h>
 #include <cstdlib>
+#include <thread>
 using namespace std;
 
 // Type definitions 
@@ -46,6 +47,10 @@ typedef vector<string> V_STRING;
 typedef	string T_WORD;
 typedef	string LINE;
 typedef	string T_STRING;
+
+#define BLOQUELINEA (128'000)
+#define BLOQUE (1'920)//1024+512+256+128)// tamaño donde se realiza la copia de manera algo mas rapida
+
 
 const T_LONGLONG BLOQUELINEA = 128000;
 const T_LONG BLOQUE = 1920;
